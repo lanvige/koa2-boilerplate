@@ -1,0 +1,37 @@
+##################################################
+# application.yml
+# using yenv: https://github.com/jeffijoe/yenv
+#
+# Contains our environment variables.
+# When the environment actually specifies
+# any of the values here, the actual environment
+# variables win. See the yenv docs.
+##################################################
+
+# Development environment.
+development:
+  # Production environment is based on development.
+  host: 192.168.36.101
+  port: 3306
+  database: hscontent
+  username: hjtms_jzm
+  password: ee0Jg35xpQDSa2Qa
+
+# Running tests
+tests:
+  host: 192.168.36.101
+  port: 3306
+  database: hscontent
+  username: hjtms_jzm
+  password: ee0Jg35xpQDSa2Qa
+
+# Production environment.
+production:
+  # Production environment is based on development.
+  host: 10.10.40.55
+  port: 3306
+  database: hscontent
+  username: hjtms_jzm
+  password: ee0Jg35xpQDSa2Qa
+
+

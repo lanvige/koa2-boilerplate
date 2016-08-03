@@ -1,0 +1,42 @@
+#----------------------------------------------------------------------------
+# Ignore these files when committing to a git repository.
+#
+# See http://git-scm.com/docs/gitignore for more about ignoring files.
+#----------------------------------------------------------------------------
+
+
+## System and Editor
+## =================
+
+# Mac finder artifacts
+.DS_Store
+
+# RubyMine project files
+.idea
+
+# Textmate project files
+/*.tmproj
+
+# Visual Studio Code
+.vscode
+
+# vim artifacts
+**.swp
+
+# scm revert files
+**.orig
+
+
+
+## Project
+## ======
+
+# NPM state
+node_modules
+npm-debug.log
+
+# Build artifacts
+dist/*
+!dist/.keep
+
+# Test
