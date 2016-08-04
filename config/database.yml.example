@@ -1,5 +1,5 @@
 ##################################################
-# application.yml
+# database.yml
 # using yenv: https://github.com/jeffijoe/yenv
 #
 # Contains our environment variables.
@@ -10,28 +10,28 @@
 
 # Development environment.
 development:
-  # Production environment is based on development.
-  host: 192.168.36.101
+  host: 192.168.0.1
   port: 3306
-  database: hscontent
-  username: hjtms
-  password: ee0Jg35xpQDSa2Qa
+  database: koa2-boilerplate
+  username: root
+  password: root
+
 
 # Running tests
 tests:
-  host: 192.168.36.101
+  host: 192.168.0.1
   port: 3306
-  database: hscontent
-  username: hjtms
-  password: ee0Jg35xpQDSa2Qa
+  database: koa2-boilerplate
+  username: root
+  password: root
+
 
 # Production environment.
 production:
-  # Production environment is based on development.
-  host: 192.168.36.101
+  host: 192.168.0.1
   port: 3306
-  database: hscontent
-  username: hjtms
-  password: ee0Jg35xpQDSa2Qa
+  database: koa2-boilerplate
+  username: root
+  password: root
 
 
