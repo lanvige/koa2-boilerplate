@@ -26,7 +26,7 @@ koa 相对于 express 更吸引开发者的地方莫过于 U 型 Middleware 机�
 
 ### AsyncFuncation
 
-通过 `babel` 来实现了 `async-await` （为了 async 可以做出任何牺牲）。
+通过 `babel` 来实现了 `async-await` （为了 async 的美可以做出任何牺牲）。
 
 
 ### Module
@@ -50,12 +50,20 @@ DI 可以统一管理这些依赖，只需要修改一处，当然最大的好�
 通过 [`yenv`](https://github.com/jeffijoe/yenv) 来实现环境变量管理。
 
 
+
+### Sequlize
+
+我们在项目中大量的使用了 Sequlize，也吐槽了很多，这里只是一个最简单的结合示例。
+
+
 <br/>
 ## Directory structure
 
-node web 项目，更多的是将源码等放在一个 src 的目录下，这样的好处是为了方便编译，后端项目也有一些这样的实践，但这里并没有采用，原因是随着 node 对标准的支持，在不久的将来，我们线上的代码是不再需要编译的。可以像 rails 一下直接运行（好期待那天）。
+一般通过 node 创建的 web 项目，通用的作法是将源码等放在一个 src 的目录下，这样的好处是为了方便编译，感谢 babel，可以提前享受 ES 新语法。
 
-当然目前还是需要编译的，这样就不需要在服务器上跑 babel-runtime。dist 是编译后的目录。
+后端项目也有一些这样的实践，但这里并没有采用，原因是随着 node 对标准的支持，在不久的将来，我们线上的代码是不再需要编译的。可以像 rails 一下直接运行（好期待那天）。
+
+当然目前还是需要编译的，这样就不需要在服务器上跑 babel-runtime。dist 是编译后的目录，通过 npm 对具体目录做了一些单独的编译。
 
 * `app`: 项目主要的业务逻辑代码。
   * `api`: 本层主要处理到达的请求，将参数做整理，然后交由 service 层。
@@ -63,6 +71,7 @@ node web 项目，更多的是将源码等放在一个 src 的目录下，这样
   * `model`: 项目的 models。
 * `bin`: babel 需要一个启动文件。
 * `config`: 环境变量配置目录。
+* `db`:  数据库的一些资源。
 * `dist`: 编译后的文件。
 * `lib`: 一些系统类库，处理环境变量。和工具类。
   * `middleware`: middleware。
