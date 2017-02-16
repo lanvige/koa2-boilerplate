@@ -1,9 +1,8 @@
 # Koa2 Boilerplate
 
-这是我整理的一个 koa2 + es7 的一个最佳实践，用了一些新的 Feature，完成了全部流程，从 request 到 service 和 DB（Sequlize）到 response。
+这是团队近两年的一个 koa2 + es7 的最佳实践，项目中用到一些新的 Feature，并完成了从 request 到 service 和 DB（Sequlize）到 response 的全部流程。同时也包含了一些基本的 middleware。
 
 
-<br/>
 ## Features
 
 ### koa2 & koa-router
@@ -12,24 +11,29 @@ koa 相对于 express 更吸引开发者的地方莫过于 U 型 Middleware 机�
 
 ### Babel
 
-目前 node v6 已经支持了绝大多数新的语法，<http://node.green/>
+目前 `Node v6` 已经支持了绝大多数 ECMAScript 新的语法，<http://node.green/>
 
-目前用下来只有两个 feature，就是 asyncFuncation 和 module，所以在配置项中，只需要开启这两项就够了。async 会被编译为 generater。
+项目中用到的 feature 中，只有 asyncFuncation 和 ES Module 暂未支持，所以在配置项中，只需要开启这两项就够了。
 
 ``` json
 {
   "presets": ["es2017"],
+  "plugins": ["transform-es2015-modules-commonjs"],
   "sourceMaps": "both"
 }
 
 ```
 
-### AsyncFuncation
+#### - Async Funcation
 
 通过 `babel` 来实现了 `async-await` （为了 async 的美可以做出任何牺牲）。
 
+async 会被编译为 generater。
 
-### Module
+在 Node v7 中 asyncFunction 已经可以通过 harmony 来开启原生支持了。
+
+
+#### - MES Module
 
 ES 6 中模块化有一些显著的变化,像 import/export，[具体见](http://es6.ruanyifeng.com/#docs/module)。
 
@@ -42,13 +46,12 @@ ES 6 中模块化有一些显著的变化,像 import/export，[具体见](http:/
 
 DI 可以统一管理这些依赖，只需要修改一处，当然最大的好处莫过于解耦，便于测试。
 
-这里用的是 [`Awilix`](https://github.com/jeffijoe/awilix)。
+项目中用到的是 [`Awilix`](https://github.com/jeffijoe/awilix)。
 
 
 ### Environment
 
 通过 [`yenv`](https://github.com/jeffijoe/yenv) 来实现环境变量管理。
-
 
 
 ### Sequlize
@@ -59,7 +62,7 @@ DI 可以统一管理这些依赖，只需要修改一处，当然最大的好�
 <br/>
 ## Directory structure
 
-一般通过 node 创建的 web 项目，通用的作法是将源码等放在一个 src 的目录下，这样的好处是为了方便编译，感谢 babel，可以提前享受 ES 新语法。
+一般通过 Node 创建的 web 项目，通用的作法是将源码等放在一个 src 的目录下，这样的好处是为了方便编译，感谢 babel，可以提前享受 ES 新语法。
 
 后端项目也有一些这样的实践，但这里并没有采用，原因是随着 node 对标准的支持，在不久的将来，我们线上的代码是不再需要编译的。可以像 rails 一下直接运行（好期待那天）。
 
@@ -79,22 +82,19 @@ DI 可以统一管理这些依赖，只需要修改一处，当然最大的好�
 
 
 <br/>
-## `npm run` scripts
+## `npm run` 脚本命令
 
 这里定义了一些常用的启动命令：
 
-* `start`: Used by the production environment to start the app. This will run a compiled version, so you need to execute `build` first.
-* `build`: Runs the `babel` CLI to compile the app. Files are emitted to `dist/`.
-* `dev`: Runs the app in development mode - uses `babel-register` to compile on-the-fly. Also uses `nodemon` to automatically restart when stuff changes.
-* `debug`: Runs the app in development mode with `icebug` (a combo of `nodemon` + `node-inspector`).
-* `test`: Runs `mocha` tests.
-* `test-watch`: Runs `mocha` tests in watch-mode.
-* `lint`: Lints the code in `src` and `test` with `eslint`.
-* `lint-watch`: Same as above, in watch-mode.
+* `start`: 通过该命令，可以启动 App。默认端口 3000，默认环境 development。可通过 ENV 来设置，如 `NODE_ENV=production PORT=3033 npm run start`。
+* `build`: 通过 `babel` 的命令行，将代码中未支持的语法进行编译，和其它配置、项目文件一起，放置到 `dist/` 目录，该目录代码可用于 production 环境。
+* `test`: 运行 `mocha` 进行测试。
+* `test-watch`: 同上，但使用 watch-mode。
+* `lint`: 使用 ESLints 对项目的代码进行风格检查，配置文件在 .eslintrc 中。
+* `lint-watch`: 同上，但使用 watch-mode。
 
-**Tip**: to pass additional arguments to the actual CLI's being called, do it like in this example:
 
-```bash
-npm run test -- --debug
-```
+<br/>
+## 使用愉快~~~
 
+如果有任何问题，欢迎 PR 或 提 Issue。

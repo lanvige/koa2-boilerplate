@@ -14,7 +14,7 @@ export default class PageService {
     let pages = await this.page.findAll({
       attributes: this.pageFields,
       where: {
-        slide_id: slideId
+        slideId: slideId
       },
       order: [['sequence', 'DESC']]
     });

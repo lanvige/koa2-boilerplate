@@ -14,12 +14,12 @@
     "build:copyappfile": "cp package.json dist/ && cp yarn.lock dist/ && cp Dockerfile dist/ && cp docker-compose.yml dist/",
     "build:copyall": "npm run build:copybin && npm run build:copyconfig && npm run build:copyappfile",
     "build": "npm run clean && npm run build:all && npm run build:copyall",
-    "dev": "nodemon bin/server.js",
+    "dev": "node bin/server.js",
     "debug": "icebug src/bin/server.js",
     "debug-brk": "npm run debug -- --break",
     "test": "mocha test/**/*.js --compilers js:babel-register --require test/_helpers",
     "test-watch": "npm run test -- --watch",
-    "lint": "eslint src/ test/",
+    "lint": "eslint app/ bin/ lib/ test/",
     "lint-watch": "esw -w src/ test/"
   },
   "author": {

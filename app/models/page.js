@@ -1,5 +1,5 @@
-import Sequelize from 'sequelize'
-import db from 'lib/database'
+import Sequelize from 'sequelize';
+import db from 'lib/database';
 
 const Page = db.define('Page', {
   content: { type: Sequelize.TEXT, defaultValue: '', trim: true },

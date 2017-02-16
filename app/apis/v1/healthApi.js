@@ -1,5 +1,5 @@
-import { makeClassInvoker } from 'awilix-koa'
-import application from 'package.json'
+import { makeClassInvoker } from 'awilix-koa';
+import application from 'package.json';
 import database from 'lib/database';
 
 class HealthApi {
@@ -9,7 +9,7 @@ class HealthApi {
 
   async checkDatabase() {
     try {
-      await database.authenticate()
+      await database.authenticate();
     } catch (error) {
       console.log(error);
       return false;

@@ -1,4 +1,4 @@
-import { makeClassInvoker } from 'awilix-koa'
+import { makeClassInvoker } from 'awilix-koa';
 
 class PagesApi {
 
@@ -7,14 +7,13 @@ class PagesApi {
   }
 
   async getSlidePages(ctx) {
-
     let slideId = parseInt(ctx.params.slideId);
     if ( isNaN(slideId) || slideId <= 0 ) {
       return ctx.badRequest('Invalid arguments');
     }
 
     const classes = await this.pageService.getSlidePages(slideId);
-    ctx.success(classes);
+    return ctx.success(classes);
   }
 }
 
