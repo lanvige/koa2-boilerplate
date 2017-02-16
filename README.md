@@ -5,7 +5,7 @@
 
 ## 项目用到的功能
 
-### 🌈 koa2 & koa-router
+### 🌈 Koa2 & koa-router
 
 Koa 相对于 Express 更吸引开发者的地方莫过于 U 型 Middleware 机制，而 Koa2 则是更激进的使用到了 async 语法，这也是迟迟未发布正式版的原因。
 
@@ -68,9 +68,9 @@ DI 可以统一管理这些依赖，只需要统一处理，当然最大的好�
 当然目前还是需要编译的，这样就不需要在服务器上跑 babel-runtime，会对性能有影响。dist 是编译后的目录，通过 npm 对具体目录做了一些单独的编译。
 
 * `app`: 项目主要的业务逻辑代码。
-  * `api`: 本层主要处理到达的请求，将参数做整理，然后交由 service 层。
+  * `apis`: 本层主要处理到达的请求，将参数做整理，然后交由 service 层。
   * `services`: 服务层从 ORM 中取数据，然后拼接加工，最后返回 api 层。
-  * `model`: 项目的 models，由 Sequlize 来定义，并提供基础的增删查改接口。
+  * `models`: 项目的 models，由 Sequlize 来定义，并提供基础的增删查改接口。
 * `bin`: 
   * `_babel.js`: babel-runtime 的配置文件，DEV 环境下使用，动态编译 js。
   * `server.js`:  项目的启动文件，根据环境来判断是否需要 babel-runtime。
