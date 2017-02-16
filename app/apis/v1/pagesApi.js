@@ -1,4 +1,4 @@
-import { makeClassInvoker } from 'lib/middleware/invocation';
+import { makeClassInvoker } from 'awilix-koa'
 
 class PagesApi {
 
@@ -23,5 +23,5 @@ export default function (router) {
   // Same trick as the functional API, but using `makeClassInvoker`.
   const api = makeClassInvoker(PagesApi);
 
-  router.get('/v2/slides/:slideId/pages', api('getSlidePages'));
+  router.get('/v1/slides/:slideId/pages', api('getSlidePages'));
 }
