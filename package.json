@@ -20,7 +20,7 @@
     "test": "mocha test/**/*.js --compilers js:babel-register --require test/_helpers",
     "test-watch": "npm run test -- --watch",
     "lint": "eslint app/ bin/ lib/ test/",
-    "lint-watch": "esw -w src/ test/"
+    "lint-watch": "esw -w app/ bin/ lib/ test/"
   },
   "author": {
     "name": "Lanvige Jiang"

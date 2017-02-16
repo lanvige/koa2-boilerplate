@@ -93,6 +93,17 @@ DI 可以统一管理这些依赖，只需要修改一处，当然最大的好�
 * `lint`: 使用 ESLints 对项目的代码进行风格检查，配置文件在 .eslintrc 中。
 * `lint-watch`: 同上，但使用 watch-mode。
 
+**Tip**: 在使用 lint 和 lint-watch 前，要先安装工具：
+
+```
+$ npm install -g eslint
+$ npm install -g eslint-watch
+
+# 使用 yarn
+$ yarn global add eslint
+$ yarn global add eslint-watch
+```
+
 
 <br/>
 ## 使用愉快~~~
