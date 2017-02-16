@@ -5,12 +5,12 @@
 
 ## 项目用到的功能
 
-### koa2 & koa-router
+### 🌈 koa2 & koa-router
 
 Koa 相对于 Express 更吸引开发者的地方莫过于 U 型 Middleware 机制，而 Koa2 则是更激进的使用到了 async 语法，这也是迟迟未发布正式版的原因。
 
 
-### Babel
+### 🌈 Babel
 
 目前 `Node v6` 已经支持了绝大多数 ECMAScript 新的语法，<http://node.green/>
 
@@ -39,7 +39,7 @@ ECMAScript 中模块化有一些显著的变化,像 `import/export`，[具体见
 > ES Modules 是一个烫手的山芋，除了技术的问题外，还有多方的争论，[可参见](https://segmentfault.com/a/1190000004940294)。
 
 
-### DI Container
+### 🌈 DI Container
 
 在之前的 Express 项目中，大量的文件在开头要被 require，而且这些文件散落在各处，一旦要进行修改，真的是痛不堪言。
 
@@ -48,12 +48,12 @@ DI 可以统一管理这些依赖，只需要统一处理，当然最大的好�
 本项目中用到的是库： [`Awilix`](https://github.com/jeffijoe/awilix)。
 
 
-### Environment
+### 🌈 Environment
 
 通过 [`yenv`](https://github.com/jeffijoe/yenv) 来实现环境变量管理。
 
 
-### Sequlize
+### 🌈 Sequlize (MySQL)
 
 项目中 ORM 使用 `Sequlize@4.0.0-2`，虽然 4.x 版本一直没有 release，但其支持 MySQL 5.7 中的 JSON feature，安全性很好，值得推荐，这里是一个简单的 MySQL 的示例。
 
