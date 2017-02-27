@@ -5,7 +5,6 @@ services:
       context: .
       args:
         NODE_ENV: production
-    container_name: app-koa2-boilerplate
     ports:
       - "8021:80"
     # log_driver: "syslog"

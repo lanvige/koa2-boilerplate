@@ -1,8 +1,7 @@
-var chalk = require('chalk');
 
 module.exports = function (shipit) {
   require('shipit-deploy')(shipit);
-  require('shipit-shared')(shipit);
+  require('shipit-shared-copy')(shipit);
 
   shipit.initConfig({
     default: {
@@ -51,18 +50,25 @@ module.exports = function (shipit) {
 
   // Docker build & run on Remote
   shipit.blTask('docker-build', function () {
-    shipit.log(chalk.green('docker-compose build...'));
+    shipit.log('docker-compose build...');
     // return shipit.remote('cd '+shipit.releasePath+'; pwd');
     return shipit.remote('cd /data/repos/app-koa2bp/current; docker-compose build');
   });
 
-  shipit.blTask('docker-run', function () {
-    shipit.log(chalk.green('docker-compose up start...'));
-    return shipit.remote('cd /data/repos/app-koa2bp/current; docker-compose up -d --build')
+  // Docker build & run on Remote
+  shipit.blTask('docker-stop', function () {
+    shipit.log('docker-compose stop...');
+    // return shipit.remote('cd '+shipit.releasePath+'; pwd');
+    return shipit.remote('cd /data/repos/app-koa2bp/current; docker-compose stop');
   });
 
-  shipit.on('deployed', function() {
-    shipit.log(chalk.green('Docker deploy start'));
+  shipit.blTask('docker-run', function () {
+    shipit.log('docker-compose up start...');
+    return shipit.remote('cd /data/repos/app-koa2bp/current; docker-compose up -d --no-deps')
+  });
+
+  shipit.on('deployed1', function() {
+    shipit.log('Docker deploy start');
     shipit.start(['docker-run']);
   })
 };
