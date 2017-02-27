@@ -72,6 +72,11 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+# Secret files
+config/application.yml
+config/database.yml
+config/redis.yml
+
 
 
 
