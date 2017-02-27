@@ -1,0 +1,11 @@
+apps:
+  - script   : bin/server.js
+    name     : app-koa2bp
+    watch    : true
+    # instances: 2
+    exec_mode: fork
+    # error_file: /var/log/redeem-api/err.log
+    # out_file: /var/log/redeem-api/out.log
+    env :
+      PORT: 80
+      NODE_ENV: production
