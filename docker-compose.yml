@@ -1,14 +1,16 @@
-app-koa2-boilerplate:
-  build:
-    context: .
-    args:
-      NODE_EVN: production
-  container_name: app-koa2-boilerplate
-  ports:
-    - "8021:80"
-  # log_driver: "syslog"
-  # log_opt:
-  #   syslog-address: "tcp://10.10.50.114:10514"
-  # command: pm2 start /app/process.yml --no-daemon
-  environment:
-    - TZ=Asia/Shanghai
+version: '3'
+services:
+  app-koa2-boilerplate:
+    build:
+      context: .
+      args:
+        NODE_ENV: production
+    container_name: app-koa2-boilerplate
+    ports:
+      - "8021:80"
+    # log_driver: "syslog"
+    # log_opt:
+    #   syslog-address: "tcp://10.10.50.114:10514"
+    # command: pm2 start /app/process.yml --no-daemon
+    environment:
+      - TZ=Asia/Shanghai
