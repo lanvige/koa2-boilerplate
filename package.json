@@ -72,6 +72,7 @@
     "sequelize-cli": "^2.5.1",
     "shipit-deploy": "^2.4.0",
     "shipit-shared": "^4.4.2",
+    "shipit-shared-copy": "^0.1.0",
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
     "source-map-support": "^0.4.8",

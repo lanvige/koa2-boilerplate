@@ -59,7 +59,7 @@ module.exports = function (shipit) {
   shipit.blTask('docker-stop', function () {
     shipit.log('docker-compose stop...');
     // return shipit.remote('cd '+shipit.releasePath+'; pwd');
-    return shipit.remote('cd /data/repos/app-koa2bp/current; docker-compose stop');
+    return shipit.remote('cd /data/repos/app-koa2bp/current; docker-compose rm');
   });
 
   shipit.blTask('docker-run', function () {

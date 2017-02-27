@@ -1,4 +1,4 @@
-FROM lanvige/node-deploy:7.5.0-onbuild
+FROM lanvige/node-deploy:7.6.0-onbuild
 
 MAINTAINER Lanvige Jiang
 
