@@ -58,11 +58,11 @@ module.exports = function (shipit) {
 
   shipit.blTask('docker-run', function () {
     shipit.log(chalk.green('docker-compose up start...'));
-    return shipit.remote('cd /data/repos/app-koa2bp/current; docker-compose up')
+    return shipit.remote('cd /data/repos/app-koa2bp/current; docker-compose up -d --build')
   });
 
   shipit.on('deployed', function() {
     shipit.log(chalk.green('Docker deploy start'));
-    shipit.start(['docker-build', 'docker-run']);
+    shipit.start(['docker-run']);
   })
 };
