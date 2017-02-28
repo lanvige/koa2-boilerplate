@@ -3,7 +3,6 @@ services:
   app-koa2-boilerplate:
     build:
       context: .
-      image: app-koa2boil
       args:
         NODE_ENV: production
     container_name: app-koa2boil
