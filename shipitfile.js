@@ -32,6 +32,8 @@ module.exports = function (shipit) {
     return shipit.remote('pwd');
   });
 
+
+
   // npm install & build
   shipit.blTask('npm-install', function () {
     shipit.log('yarn install.');
@@ -48,27 +50,46 @@ module.exports = function (shipit) {
     shipit.start(['npm-install', 'npm-build']);
   });
 
-  // Docker build & run on Remote
-  shipit.blTask('docker-build', function () {
-    shipit.log('docker-compose build...');
-    // return shipit.remote('cd '+shipit.releasePath+'; pwd');
-    return shipit.remote('cd /data/repos/app-koa2bp/current; docker-compose build');
+
+
+  // Docker dislike soft link
+  // So make a physical copy (deploy) instead of softlink (current)
+  shipit.blTask('deploy-clean', function () {
+    console.log('cp -R ' + shipit.releasePath + ' ' + shipit.config.deployTo + '/deploy');
+    return shipit.remote('rm -rf ' + shipit.config.deployTo + '/deploy');
   });
+
+  shipit.blTask('deploy-duplicate', function () {
+    return shipit.remote('cp -R ' + shipit.releasePath + ' ' + shipit.config.deployTo + '/deploy');
+  });
+
+  shipit.on('published', function () {
+    shipit.start(['deploy-clean', 'deploy-duplicate']);
+  });
+
+
 
   // Docker build & run on Remote
-  shipit.blTask('docker-stop', function () {
-    shipit.log('docker-compose stop...');
-    // return shipit.remote('cd '+shipit.releasePath+'; pwd');
-    return shipit.remote('cd /data/repos/app-koa2bp/current; docker-compose rm');
+  shipit.blTask('docker-up', function () {
+    shipit.log('docker-compose up with build...');
+    return shipit.remote('cd ' + shipit.config.deployTo + '/deploy; docker-compose up -d --build');
   });
 
-  shipit.blTask('docker-run', function () {
-    shipit.log('docker-compose up start...');
-    return shipit.remote('cd /data/repos/app-koa2bp/current; docker-compose up -d --no-deps')
-  });
 
-  shipit.on('deployed1', function() {
-    shipit.log('Docker deploy start');
-    shipit.start(['docker-run']);
-  })
+  // // Docker build & run on Remote
+  // shipit.blTask('docker-stop', function () {
+  //   shipit.log('docker-compose stop...');
+  //   // return shipit.remote('cd '+shipit.releasePath+'; pwd');
+  //   return shipit.remote('cd /data/repos/app-koa2bp/current; docker-compose rm');
+  // });
+
+  // shipit.blTask('docker-run', function () {
+  //   shipit.log('docker-compose up start...');
+  //   return shipit.remote('cd /data/repos/app-koa2bp/current; docker-compose up -d --no-deps')
+  // });
+
+  // shipit.on('deployed1', function () {
+  //   shipit.log('Docker deploy start');
+  //   shipit.start(['docker-run']);
+  // });
 };
