@@ -24,7 +24,7 @@ module.exports = function (shipit) {
       }
     },
     staging: {
-      servers: 'root@h.d2labs.cn'
+      servers: 'ares@h.d2labs.cn'
     }
   });
 
@@ -42,7 +42,7 @@ module.exports = function (shipit) {
 
   shipit.blTask('npm-build', function () {
     shipit.log('npm build start.');
-    return shipit.local('npm run build', { cwd: '/tmp/app-koa2boilerplate' })
+    return shipit.local('yarn run build', { cwd: '/tmp/app-koa2boilerplate' })
   });
 
   shipit.on('fetched', function () {
