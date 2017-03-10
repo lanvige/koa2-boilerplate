@@ -66,7 +66,6 @@
     "csv-parse": "^1.1.7",
     "eslint": "^3.16.1",
     "eslint-watch": "^3.0.0",
-    "icebug": "^0.1.6",
     "mocha": "^3.2.0",
     "nodemon": "^1.11.0",
     "sequelize-cli": "^2.5.1",
