@@ -7,7 +7,7 @@ services:
         NODE_ENV: production
     container_name: app-koa2boil
     ports:
-      - "8021:80"
+      - "8030:80"
     # log_driver: "syslog"
     # log_opt:
     #   syslog-address: "tcp://10.10.50.1:10514"
