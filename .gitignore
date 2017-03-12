@@ -76,7 +76,9 @@ coverage
 config/application.yml
 config/database.yml
 config/redis.yml
-
+config/application.json
+config/database.json
+config/redis.json
 
 
 

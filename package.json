@@ -5,6 +5,7 @@
   "scripts": {
     "clean": "rm -rf dist/*",
     "start": "node bin/server.js",
+    "build:bin": "babel bin -d dist/bin -s",
     "build:app": "babel app -d dist/app -s",
     "build:lib": "babel lib -d dist/lib -s",
     "build:config": "babel config -d dist/config -s",
@@ -12,7 +13,7 @@
     "build:copybin": "mkdir -p dist/bin && cp bin/server.js dist/bin/server.js",
     "build:copyconfig": "mkdir -p dist/config",
     "build:copyappfile": "cp package.json dist/ && cp yarn.lock dist/ && cp process.yml dist/ && cp Dockerfile dist/ && cp docker-compose.yml dist/",
-    "build:copyall": "npm run build:copybin && npm run build:copyconfig && npm run build:copyappfile",
+    "build:copyall": "npm run build:bin && npm run build:copyconfig && npm run build:copyappfile",
     "build": "npm run clean && npm run build:all && npm run build:copyall",
     "dev": "node bin/server.js",
     "debug": "icebug src/bin/server.js",
@@ -52,8 +53,7 @@
     "request": "^2.79.0",
     "request-promise-native": "^1.0.3",
     "sequelize": "^4.0.0-2",
-    "sha1": "^1.1.1",
-    "yenv": "^1.0.6"
+    "sha1": "^1.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

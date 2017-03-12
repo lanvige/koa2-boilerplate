@@ -1,3 +1,4 @@
+// the deploy config
 
 module.exports = function (shipit) {
   require('shipit-deploy')(shipit);
