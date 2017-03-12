@@ -19,8 +19,8 @@ module.exports = function (shipit) {
       shared: {
         overwrite: true,
         files: [
-          'config/application.yml',
-          'config/database.yml'
+          'config/application.json',
+          'config/database.json'
         ],
       }
     },
