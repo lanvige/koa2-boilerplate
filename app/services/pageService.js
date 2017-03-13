@@ -19,8 +19,8 @@ export default class PageService {
       order: [['sequence', 'DESC']]
     });
 
-    if ( pages && pages.length > 0 ) {
-      return pages.map((item)=> {
+    if (pages && pages.length > 0) {
+      return pages.map((item) => {
         return item.toJSON();
       });
     }

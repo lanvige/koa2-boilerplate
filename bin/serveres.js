@@ -5,7 +5,7 @@
 
 
 import environment from '../lib/environment';
-import createServer from '../lib/createServer'
+import createServer from '../lib/createServer';
 
 
 const NODE_ENV = environment.nodeEnv;

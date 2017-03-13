@@ -8,4 +8,4 @@ if (nodeEnv === 'development') {
   require('./_babel');
 }
 
-require('./serveres')
+require('./serveres');
