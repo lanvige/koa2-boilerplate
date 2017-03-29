@@ -7,7 +7,7 @@ class PagesApi {
   }
 
   async getSlidePages(ctx) {
-    let slideId = parseInt(ctx.params.slideId);
+    const slideId = parseInt(ctx.params.slideId, 10);
     if (isNaN(slideId) || slideId <= 0) {
       return ctx.badRequest('Invalid arguments');
     }

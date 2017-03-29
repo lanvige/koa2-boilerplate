@@ -4,14 +4,10 @@ import database from 'lib/database';
 
 class HealthApi {
 
-  constructor({ }) {
-  }
-
   async checkDatabase() {
     try {
       await database.authenticate();
     } catch (error) {
-      console.log(error);
       return false;
     }
 
@@ -24,14 +20,14 @@ class HealthApi {
   }
 
   async info(ctx) {
-    let dbConnected = await this.checkDatabase();
+    const dbConnected = await this.checkDatabase();
 
-    let info = {
+    const info = {
       version: application.version,
       database: {
         connected: dbConnected,
-        instance: 'mysql-5.7'
-      }
+        instance: 'mysql-5.7',
+      },
     };
 
     return ctx.success(info);

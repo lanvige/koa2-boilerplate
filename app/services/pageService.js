@@ -11,18 +11,16 @@ export default class PageService {
   }
 
   async getSlidePages(slideId) {
-    let pages = await this.page.findAll({
+    const pages = await this.page.findAll({
       attributes: this.pageFields,
       where: {
-        slideId: slideId
+        slideId,
       },
-      order: [['sequence', 'DESC']]
+      order: [['sequence', 'DESC']],
     });
 
     if (pages && pages.length > 0) {
-      return pages.map((item) => {
-        return item.toJSON();
-      });
+      return pages.map(item => item.toJSON());
     }
 
     return null;

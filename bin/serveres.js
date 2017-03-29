@@ -13,11 +13,11 @@ const PORT = environment.port;
 
 
 // Startup the server.
-createServer().then(app => {
+createServer().then((app) => {
   app.listen(PORT, () => {
     console.log('Server listening on', PORT, 'in', NODE_ENV, 'mode');
   });
-}, err => {
+}, (err) => {
   console.error(err.stack);
   process.exit(1);
 });
