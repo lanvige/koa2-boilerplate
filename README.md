@@ -117,7 +117,8 @@ $ yarn global add eslint-watch
 <br/>
 ## 解决方案
 
-###🌟 配置文件
+
+### 🌟 配置文件
 
 application.json & database.json 为什么要被加入 gitignore 中？
 
@@ -125,7 +126,7 @@ application.json & database.json 为什么要被加入 gitignore 中？
 
 在公司项目中，依然推荐这样做，当 git 被拉了以后，也不会丢失安全信息。开发者手里只有 DEV 环境的数据，不会造成安全问题，线上的配置由运维一次性配置。
 
-###🌟 构建流程
+### 🌟 构建流程
 
 目前项目仅用了 npm 的构建工具，这些会更加轻量，整个流程分为三步：
 
@@ -145,7 +146,7 @@ application.json & database.json 为什么要被加入 gitignore 中？
 "build": "npm run clean && npm run build:all && npm run build:copy",
 ```
 
-###🌟 移除数据库依赖
+### 🌟 移除数据库依赖
 
 如果只是 gateway 项目，不需要访问 DB，可以删除或修改以下文件，去掉数据库依赖。
 
@@ -159,7 +160,7 @@ application.json & database.json 为什么要被加入 gitignore 中？
 <br>
 ## 其它说明
 
-###🌟 `babel` 的配置
+### 🌟 `babel` 的配置
 
 项目代码的语法用到了最新的 ECMA 2016，在目前的开发过程中，需要 Babel 的参与才能完成执行工作。
 
@@ -168,12 +169,12 @@ application.json & database.json 为什么要被加入 gitignore 中？
 经过不同的尝试，开发环境使用 babel-node，是一件很方便的事，会保证配置的一致性（都依赖于一个 .babelrc 文件）。
 
 
-###🌟 `yarn`
+### 🌟 `yarn`
 
 全程推荐使用 yarn，会带来更快，更安全的体验。
 
 
-###🌟 ESLint
+### 🌟 ESLint
 
 项目推荐使用 [airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base) 的规范，也会做出一些修改。
 
