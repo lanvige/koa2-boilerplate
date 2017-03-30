@@ -115,6 +115,7 @@ $ yarn global add eslint-watch
 
 
 <br/>
+
 ## 解决方案
 
 在项目中的一些解决方案的说明：
@@ -158,7 +159,8 @@ application.json & database.json 为什么要被加入 gitignore 中？
 - 修改 app/apis/v1/healthApi.js，移除 db 检测的相关代码
 
 
-<br>
+<br/>
+
 ## 其它说明
 
 项目使用配置的一些说明：
