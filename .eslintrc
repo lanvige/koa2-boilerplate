@@ -2,13 +2,14 @@
   "extends": "airbnb-base",
   "parser": "babel-eslint",
   "rules": {
-    "consistent-return": "off",
-    "class-methods-use-this": "off",
-    "import/no-extraneous-dependencies": "off",
-    "import/no-dynamic-require": "off",
-    "import/no-unresolved": "off",
-    "import/extensions": "off",
-    "no-param-reassign": "off",
-    "global-require": "off"
+    "consistent-return": 0,
+    "class-methods-use-this": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-dynamic-require": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "no-param-reassign": 0,
+    "global-require": 0,
+    "no-console": 0
   }
 }

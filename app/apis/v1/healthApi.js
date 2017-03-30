@@ -1,12 +1,16 @@
 import { makeClassInvoker } from 'awilix-koa';
-import application from 'package.json';
-import database from 'lib/database';
+// import application from '../../../package.json';
 
 class HealthApi {
 
+  constructor({ db, packagejson }) {
+    this.db = db;
+    this.packagejson = packagejson;
+  }
+
   async checkDatabase() {
     try {
-      await database.authenticate();
+      await this.db.authenticate();
     } catch (error) {
       return false;
     }
@@ -23,7 +27,7 @@ class HealthApi {
     const dbConnected = await this.checkDatabase();
 
     const info = {
-      version: application.version,
+      version: this.packagejson.version,
       database: {
         connected: dbConnected,
         instance: 'mysql-5.7',

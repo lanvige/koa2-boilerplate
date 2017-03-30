@@ -1,9 +1,8 @@
 import Sequelize, { Model } from 'sequelize';
-import db from 'lib/database';
 
 export default class Page extends Model {
 
-  static init() {
+  static init({ db }) {
     super.init({
       // attributes
       content: { type: Sequelize.TEXT, defaultValue: '', trim: true },

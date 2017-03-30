@@ -1,13 +1,20 @@
-const path = require('path');
+import environment from '../lib/environment';
+import createServer from '../lib/createServer';
 
-// Using babel here.
-// Short the import path.
-require('app-module-path').addPath(path.join(__dirname, '/../'));
+const NODE_ENV = environment.nodeEnv;
+const PORT = environment.port;
 
-const nodeEnv = process.env.NODE_ENV || 'development';
-
-if (nodeEnv === 'development') {
-  require('./_babel');
+async function startup() {
+  // Startup the server.
+  try {
+    const app = await createServer();
+    app.listen(PORT, () => {
+      console.log('Server listening on', PORT, 'in', NODE_ENV, 'mode');
+    });
+  } catch (err) {
+    console.error(err.stack);
+    process.exit(1);
+  }
 }
 
-require('./serveres');
+startup();
