@@ -30,18 +30,18 @@ module.exports = function config(shipit) {
   shipit.task('pwd', () => shipit.remote('pwd'));
 
   // npm install & build
-  shipit.blTask('npm-install', () => {
+  shipit.blTask('yarn-install', () => {
     shipit.log('yarn install.');
     return shipit.local('yarn install', { cwd: '/tmp/app-koa2boilerplate' });
   });
 
-  shipit.blTask('npm-build', () => {
-    shipit.log('npm build start.');
+  shipit.blTask('yarn-build', () => {
+    shipit.log('yarn build start.');
     return shipit.local('yarn run build', { cwd: '/tmp/app-koa2boilerplate' });
   });
 
   shipit.on('fetched', () => {
-    console.log('itis npm build');
+    console.log('run yarn build');
     shipit.start(['npm-install', 'npm-build']);
   });
 
