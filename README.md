@@ -142,7 +142,7 @@ application.json & database.json 为什么要被加入 gitignore 中？
 "build:bin": "babel bin -d dist/bin -s",
 "build:app": "babel app -d dist/app -s",
 "build:lib": "babel lib -d dist/lib -s",
-"build:all": "npm run build:bin && npm run build:app && npm run build:lib && npm run build:config",
+"build:all": "npm run build:bin && npm run build:app && npm run build:lib",
 "build:copy:config": "mkdir -p dist/config",
 "build:copy:appfile": "cp package.json dist/ && cp yarn.lock dist/ && cp process.yml dist/ && cp Dockerfile dist/ && cp docker-compose.yml dist/",
 "build:copy": "npm run build:copy:config && npm run build:copy:appfile",

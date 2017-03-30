@@ -25,6 +25,9 @@ module.exports = function config(shipit) {
     staging: {
       servers: 'ares@h.d2labs.cn',
     },
+    prod: {
+      servers: 'ares@h.d2labs.cn',
+    },
   });
 
   shipit.task('pwd', () => shipit.remote('pwd'));
@@ -41,24 +44,26 @@ module.exports = function config(shipit) {
   });
 
   shipit.on('fetched', () => {
-    console.log('run yarn build');
-    shipit.start(['npm-install', 'npm-build']);
+    shipit.log('run yarn build');
+    shipit.start(['yarn-install', 'yarn-build']);
   });
 
 
   // Docker dislike soft link
   // So make a physical copy (deploy) instead of softlink (current)
   shipit.blTask('deploy-clean', () => {
-    console.log(`cp -R ${shipit.releasePath} ${shipit.config.deployTo}/deploy`);
+    shipit.log(`cp -R ${shipit.releasePath} ${shipit.config.deployTo}/deploy`);
     return shipit.remote(`rm -rf ${shipit.config.deployTo}/deploy`);
   });
 
-  shipit.blTask('deploy-duplicate', () =>
-    shipit.remote(`cp -R ${shipit.releasePath} ${shipit.config.deployTo}/deploy`),
-  );
+  shipit.blTask('deploy-duplicate', () => {
+    shipit.log('====');
+    return shipit.remote(`cp -R ${shipit.releasePath} ${shipit.config.deployTo}/deploy`);
+  });
 
   shipit.on('published', () => {
-    shipit.start(['deploy-clean', 'deploy-duplicate']);
+    shipit.log('====');
+    return shipit.start(['deploy-clean', 'deploy-duplicate']);
   });
 
 
