@@ -3,8 +3,8 @@ services:
   app-koa2-boilerplate:
     build:
       context: .
-      args:
-        NODE_ENV: production
+      # args:
+      #   NODE_ENV: production
     container_name: app-koa2boil
     ports:
       - "8030:80"

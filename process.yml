@@ -6,6 +6,12 @@ apps:
     exec_mode: fork
     # error_file: /var/log/redeem-api/err.log
     # out_file: /var/log/redeem-api/out.log
-    env :
+    env:
       PORT: 80
       NODE_ENV: production
+    env_develop:
+      PORT: 80
+      NODE_ENV: development
+    env_test:
+      PORT: 80
+      NODE_ENV: test
