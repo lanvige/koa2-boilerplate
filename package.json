@@ -4,8 +4,8 @@
   "description": "The boilerplate project for KOA 2.",
   "scripts": {
     "clean": "rm -rf dist/*",
-    "start": "babel-node bin/server.js",
-    "dev": "nodemon bin/server.js",
+    "start": "node_modules/.bin/babel-node bin/server.js",
+    "dev": "node_modules/.bin/nodemon bin/server.js",
     "build:bin": "babel bin -d dist/bin -s",
     "build:app": "babel app -d dist/app -s",
     "build:lib": "babel lib -d dist/lib -s",
