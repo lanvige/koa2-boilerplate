@@ -39,7 +39,9 @@ pids
 *.seed
 *.pid.lock
 
+# Log
 
+*.log
 
 ## JS & Node Project various artifacts
 ## ======
