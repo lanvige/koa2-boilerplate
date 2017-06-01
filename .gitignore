@@ -49,6 +49,8 @@ pids
 # JavaScript NPM state
 node_modules
 npm-debug.log
+# Using yarn instead
+package-lock.json
 
 # JavaScript Packaged and compiled files
 .eslintcache
