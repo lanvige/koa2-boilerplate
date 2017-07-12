@@ -1,4 +1,4 @@
-FROM lanvige/node-deploy:8.1.2-alpine-onbuild
+FROM lanvige/node-deploy:8.1.4-alpine-onbuild
 
 MAINTAINER Lanvige Jiang <lanvige@gmail.com>
 
