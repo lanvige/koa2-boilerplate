@@ -2,7 +2,6 @@ import { makeClassInvoker } from 'awilix-koa';
 // import application from '../../../package.json';
 
 class HealthApi {
-
   constructor({ db, packagejson }) {
     this.db = db;
     this.packagejson = packagejson;

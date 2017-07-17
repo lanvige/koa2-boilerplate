@@ -1,7 +1,6 @@
 import Sequelize, { Model } from 'sequelize';
 
 export default class Page extends Model {
-
   static init({ db }) {
     super.init({
       // attributes

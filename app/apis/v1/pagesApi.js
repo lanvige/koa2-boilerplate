@@ -1,7 +1,6 @@
 import { makeClassInvoker } from 'awilix-koa';
 
 class PagesApi {
-
   constructor({ pageService }) {
     this.pageService = pageService;
   }
