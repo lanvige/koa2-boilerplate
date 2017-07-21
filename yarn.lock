@@ -3346,9 +3346,9 @@ sequelize-cli@^2.5.1:
     umzug "^1.11.0"
     yargs "^7.0.1"
 
-sequelize@^4.3.2:
-  version "4.3.2"
-  resolved "http://registry.npm.taobao.org/sequelize/download/sequelize-4.3.2.tgz#147ad19d6ea593ef98304e8cb0b8a692b4b9d1a3"
+sequelize@^4.4.0:
+  version "4.4.0"
+  resolved "http://registry.npm.taobao.org/sequelize/download/sequelize-4.4.0.tgz#e562d3a0103f6d80527b0c5afc014ed24d0c5c84"
   dependencies:
     bluebird "^3.4.6"
     cls-bluebird "^2.0.1"
