@@ -163,13 +163,12 @@ awilix-koa@^0.1.1:
   version "0.1.1"
   resolved "http://registry.npm.taobao.org/awilix-koa/download/awilix-koa-0.1.1.tgz#4cf6e19668b11db2ba0888e7d2203af21c67aa21"
 
-awilix@^2.6.0:
-  version "2.6.0"
-  resolved "http://registry.npm.taobao.org/awilix/download/awilix-2.6.0.tgz#453b4a17d42a9e5ffcd753d7702687037964ddab"
+awilix@^2.7.0:
+  version "2.7.0"
+  resolved "http://registry.npm.taobao.org/awilix/download/awilix-2.7.0.tgz#b440b8fb84652038b5f355703868aba2345b721b"
   dependencies:
     camel-case "^3.0.0"
     glob "^7.1.2"
-    is-class "0.0.4"
     is-plain-object "^2.0.4"
     is-string "^1.0.4"
 
@@ -746,13 +745,7 @@ debug@*, debug@^2.1.1, debug@^2.2.0, debug@^2.3.0:
   dependencies:
     ms "0.7.3"
 
-debug@2.6.0:
-  version "2.6.0"
-  resolved "http://registry.npm.taobao.org/debug/download/debug-2.6.0.tgz#bc596bcabe7617f11d9fa15361eded5608b8499b"
-  dependencies:
-    ms "0.7.2"
-
-debug@^2.6.3, debug@^2.6.8:
+debug@2.6.8, debug@^2.6.3, debug@^2.6.8:
   version "2.6.8"
   resolved "http://registry.npm.taobao.org/debug/download/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
   dependencies:
@@ -965,9 +958,11 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   version "1.0.5"
   resolved "http://registry.npm.taobao.org/escape-string-regexp/download/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-config-airbnb-base@^11.2.0:
-  version "11.2.0"
-  resolved "http://registry.npm.taobao.org/eslint-config-airbnb-base/download/eslint-config-airbnb-base-11.2.0.tgz#19a9dc4481a26f70904545ec040116876018f853"
+eslint-config-airbnb-base@^11.3.1:
+  version "11.3.1"
+  resolved "http://registry.npm.taobao.org/eslint-config-airbnb-base/download/eslint-config-airbnb-base-11.3.1.tgz#c0ab108c9beed503cb999e4c60f4ef98eda0ed30"
+  dependencies:
+    eslint-restricted-globals "^0.1.1"
 
 eslint-import-resolver-node@^0.3.1:
   version "0.3.1"
@@ -997,6 +992,10 @@ eslint-plugin-import@^2.7.0:
     lodash.cond "^4.3.0"
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
+
+eslint-restricted-globals@^0.1.1:
+  version "0.1.1"
+  resolved "http://registry.npm.taobao.org/eslint-restricted-globals/download/eslint-restricted-globals-0.1.1.tgz#35f0d5cbc64c2e3ed62e93b4b1a7af05ba7ed4d7"
 
 eslint-scope@^3.7.1:
   version "3.7.1"
@@ -1830,10 +1829,6 @@ is-builtin-module@^1.0.0:
   dependencies:
     builtin-modules "^1.0.0"
 
-is-class@0.0.4:
-  version "0.0.4"
-  resolved "http://registry.npm.taobao.org/is-class/download/is-class-0.0.4.tgz#e057451705bb34e39e3e33598c93a9837296b736"
-
 is-dotfile@^1.0.0:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/is-dotfile/download/is-dotfile-1.0.2.tgz#2c132383f39199f8edc268ca01b9b007d205cc4d"
@@ -2539,13 +2534,13 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
   dependencies:
     minimist "0.0.8"
 
-mocha@^3.4.2:
-  version "3.4.2"
-  resolved "http://registry.npm.taobao.org/mocha/download/mocha-3.4.2.tgz#d0ef4d332126dbf18d0d640c9b382dd48be97594"
+mocha@^3.5.0:
+  version "3.5.0"
+  resolved "http://registry.npm.taobao.org/mocha/download/mocha-3.5.0.tgz#1328567d2717f997030f8006234bce9b8cd72465"
   dependencies:
     browser-stdout "1.3.0"
     commander "2.9.0"
-    debug "2.6.0"
+    debug "2.6.8"
     diff "3.2.0"
     escape-string-regexp "1.0.5"
     glob "7.1.1"
@@ -2564,10 +2559,6 @@ moment-timezone@^0.5.4:
 "moment@>= 2.9.0", moment@^2.12.0, moment@^2.13.0, moment@^2.16.0, moment@^2.17.1:
   version "2.18.1"
   resolved "http://registry.npm.taobao.org/moment/download/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
-
-ms@0.7.2:
-  version "0.7.2"
-  resolved "http://registry.npm.taobao.org/ms/download/ms-0.7.2.tgz#ae25cf2512b3885a1d95d7f037868d8431124765"
 
 ms@0.7.3:
   version "0.7.3"
@@ -3353,9 +3344,9 @@ sequelize-cli@^2.5.1:
     umzug "^1.11.0"
     yargs "^7.0.1"
 
-sequelize@^4.4.1:
-  version "4.4.1"
-  resolved "http://registry.npm.taobao.org/sequelize/download/sequelize-4.4.1.tgz#cc04dd82047f81343aaeb755eb6a7c7d69c11a3f"
+sequelize@^4.4.2:
+  version "4.4.2"
+  resolved "http://registry.npm.taobao.org/sequelize/download/sequelize-4.4.2.tgz#95292e0a752e2586ec92a0e72362b76e4fcb8eae"
   dependencies:
     bluebird "^3.4.6"
     cls-bluebird "^2.0.1"
@@ -3464,9 +3455,9 @@ sinon-chai@^2.12.0:
   version "2.12.0"
   resolved "http://registry.npm.taobao.org/sinon-chai/download/sinon-chai-2.12.0.tgz#da71e9642ef7b893ba3cf2af806396a00aa45927"
 
-sinon@^2.3.8:
-  version "2.3.8"
-  resolved "http://registry.npm.taobao.org/sinon/download/sinon-2.3.8.tgz#31de06fed8fba3a671e576dd96d0a5863796f25c"
+sinon@^2.4.1:
+  version "2.4.1"
+  resolved "http://registry.npm.taobao.org/sinon/download/sinon-2.4.1.tgz#021fd64b54cb77d9d2fb0d43cdedfae7629c3a36"
   dependencies:
     diff "^3.1.0"
     formatio "1.2.0"
