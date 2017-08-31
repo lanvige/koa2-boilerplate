@@ -38,10 +38,10 @@
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.1.0",
     "koa-router": "^7.2.1",
-    "mysql2": "^1.4.1",
+    "mysql2": "^1.4.2",
     "request": "^2.81.0",
     "request-promise-native": "^1.0.4",
-    "sequelize": "^4.6.0"
+    "sequelize": "^4.8.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -52,7 +52,7 @@
     "babel-register": "^6.26.0",
     "chai": "^4.1.1",
     "eslint": "^4.5.0",
-    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-config-airbnb-base": "^11.3.2",
     "eslint-plugin-import": "^2.7.0",
     "eslint-watch": "^3.1.2",
     "mocha": "^3.5.0",

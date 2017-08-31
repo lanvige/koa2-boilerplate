@@ -1050,9 +1050,9 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   version "1.0.5"
   resolved "http://registry.npm.taobao.org/escape-string-regexp/download/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-config-airbnb-base@^11.3.1:
-  version "11.3.1"
-  resolved "http://registry.npm.taobao.org/eslint-config-airbnb-base/download/eslint-config-airbnb-base-11.3.1.tgz#c0ab108c9beed503cb999e4c60f4ef98eda0ed30"
+eslint-config-airbnb-base@^11.3.2:
+  version "11.3.2"
+  resolved "http://registry.npm.taobao.org/eslint-config-airbnb-base/download/eslint-config-airbnb-base-11.3.2.tgz#8703b11abe3c88ac7ec2b745b7fdf52e00ae680a"
   dependencies:
     eslint-restricted-globals "^0.1.1"
 
@@ -2691,9 +2691,9 @@ mute-stream@0.0.7:
   version "0.0.7"
   resolved "http://registry.npm.taobao.org/mute-stream/download/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
 
-mysql2@^1.4.1:
-  version "1.4.1"
-  resolved "http://registry.npm.taobao.org/mysql2/download/mysql2-1.4.1.tgz#53267ea0a43df850aee4e0bc993e7563c37ff552"
+mysql2@^1.4.2:
+  version "1.4.2"
+  resolved "http://registry.npm.taobao.org/mysql2/download/mysql2-1.4.2.tgz#b5e04009fd6d63f00755253df88540a2532640b2"
   dependencies:
     cardinal "1.0.0"
     denque "^1.1.1"
@@ -3447,9 +3447,9 @@ sequelize-cli@^2.8.0:
     umzug "^1.12.0"
     yargs "^8.0.1"
 
-sequelize@^4.6.0:
-  version "4.6.0"
-  resolved "http://registry.npm.taobao.org/sequelize/download/sequelize-4.6.0.tgz#2fd8bab15ac0b5362df5d2c1b1453f763d6f4f37"
+sequelize@^4.8.0:
+  version "4.8.0"
+  resolved "http://registry.npm.taobao.org/sequelize/download/sequelize-4.8.0.tgz#1987a97deceb749da7e25cd27059adb69dbf81c2"
   dependencies:
     bluebird "^3.4.6"
     cls-bluebird "^2.0.1"
