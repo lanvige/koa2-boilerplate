@@ -1,7 +1,7 @@
-import Sequelize, { Model } from 'sequelize';
+import Sequelize, { Model } from 'sequelize'
 
 export default class Page extends Model {
-  static init({ db }) {
+  static init ({ db }) {
     super.init({
       // attributes
       content: { type: Sequelize.TEXT, defaultValue: '', trim: true },
@@ -11,7 +11,7 @@ export default class Page extends Model {
       // timestamp
       createdAt: { type: Sequelize.DATE, field: 'created_at' },
       updatedAt: { type: Sequelize.DATE, field: 'updated_at' },
-      deletedAt: { type: Sequelize.DATE, field: 'deleted_at' },
+      deletedAt: { type: Sequelize.DATE, field: 'deleted_at' }
     }, {
       // configuration
       modelName: 'Page',
@@ -21,8 +21,8 @@ export default class Page extends Model {
       // updatedAt: false,
       // underscored: true,
       freezeTableName: true,
-      tableName: 'pages',
-    });
-    return this;
+      tableName: 'pages'
+    })
+    return this
   }
 }

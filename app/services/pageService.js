@@ -2,26 +2,26 @@
 // with mock dependencies.
 
 export default class PageService {
-  constructor({ Page }) {
+  constructor ({ Page }) {
     // Sequelize Attributes
-    this.pageFields = ['id', 'content', 'slideId', 'sequence'];
+    this.pageFields = ['id', 'content', 'slideId', 'sequence']
 
-    this.Page = Page;
+    this.Page = Page
   }
 
-  async getSlidePages(slideId) {
+  async getSlidePages (slideId) {
     const pages = await this.Page.findAll({
       attributes: this.pageFields,
       where: {
-        slideId,
+        slideId
       },
-      order: [['sequence', 'DESC']],
-    });
+      order: [['sequence', 'DESC']]
+    })
 
     if (pages && pages.length > 0) {
-      return pages.map(item => item.toJSON());
+      return pages.map(item => item.toJSON())
     }
 
-    return null;
+    return null
   }
 }
