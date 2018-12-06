@@ -48,7 +48,7 @@
     "@babel/cli": "^7.2.0",
     "@babel/core": "^7.2.0",
     "@babel/node": "^7.2.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
     "nodemon": "^1.18.7",
     "sequelize-cli": "^5.4.0",
     "shipit-deploy": "^4.1.3",
