@@ -26,14 +26,13 @@ babel 有多种使用方式
 
 .babelrc
 
-```
+``` json
 {
-  "plugins": ["transform-es2015-modules-commonjs"],
-  "sourceMaps": "both"
+  "plugins": ["@babel/plugin-transform-modules-commonjs"]
 }
 ```
 
-> node 8.x 中已几乎支持了所有的 ES 2017 语法，除了 ESModule。
+> node 10.x 中已几乎支持了所有的 ES 2017 语法，除了 ESModule。
 
 
 
@@ -82,7 +81,7 @@ nodemon.json
 
 这个配置文件，也可以用 cli 表示法，在 `package.json` 中加入：
 
-```
+``` json
  "scripts": {
     "dev": "nodemon --exec babel-node bin/server.js",
   },

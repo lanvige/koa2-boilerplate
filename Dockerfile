@@ -1,6 +1,6 @@
-FROM lanvige/node-deploy:8.9.0-alpine-onbuild
+FROM lanvige/node-deploy:10.4.1-alpine-onbuild
 
-MAINTAINER Lanvige Jiang <lanvige@gmail.com>
+LABEL maintainer="lanvige@gmail.com"
 
 #ENTRYPOINT ["pm2", "start", "--no-daemon", "/app/bin/api"]
 # CMD []
